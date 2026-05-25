@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: cloud-kitchen
+data:
+  DB_HOST: "10.0.5.111"        # Your DB EC2 Private IP (AZ1)
+  DB_PORT: "5432"
+  DB_NAME: "cloudkitchen"
+  CORS_ORIGINS: "http://your-alb-dns.ap-south-1.elb.amazonaws.com"
